@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THE DRONE QUEST · Pick, Carry &amp; Drop</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud" hidden>
+  <div class="pill" id="tl"><svg viewBox="0 0 24 24"><path fill="#ffd24a" stroke="#ff9d00" d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.600 5.700 21l1.500-7L2 9.300l7-.8z"/></svg><div><small>SCORE</small><b id="sc">0</b></div></div>
+  <div class="pill" id="tc"><svg viewBox="0 0 24 24" fill="none" stroke="#19e6ff" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><b id="tm">0:00</b></div>
+  <div id="ctl"><button id="bP">Pause</button><button id="bR">Restart</button></div>
+  <div class="pill" id="tr"><svg viewBox="0 0 24 24" fill="rgba(25,230,255,.25)" stroke="#19e6ff" stroke-width="2"><path d="m12 2 9 5v10l-9 5-9-5V7zM12 12l9-5M12 12 3 7M12 12v10"/></svg><div><small>CARGO</small><b id="pg">0/0</b></div></div>
+  <aside class="pn" id="L"><h3 id="lvl">MISSION</h3><div id="mn" style="font-weight:800;letter-spacing:.1em">—</div><ul id="ol"></ul><div id="obj" style="color:var(--cy);margin-top:6px"></div><div id="wx" style="margin-top:6px;color:var(--dim)"></div></aside>
+  <aside class="pn" id="R"><h3>COMBO <span id="cb" style="color:var(--gd)">x1.00</span></h3><h3>HULL</h3><div class="bar" id="hull"><b></b></div><h3>PROGRESS</h3><div class="bar" id="pgb"><b></b></div><div id="cg" style="color:var(--dim)">NO CARGO</div></aside>
+  <canvas id="rad" width="300" height="300"></canvas>
+  <div class="pn" id="keys"><div id="hint"></div><div><kbd>WASD</kbd> fly · <kbd>E</kbd>/<kbd>SPACE</kbd> pick / drop · <kbd>SHIFT</kbd> turbo · <kbd>P</kbd> pause</div></div>
+  <div class="pill" id="tb"><svg viewBox="0 0 24 24"><path fill="#ffd24a" d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg><div><small>TURBO</small><div class="seg"><b></b></div></div></div>
+  <button id="act" class="go">PICK<br>DROP</button>
+  <div id="note"></div>
+</div>
+<div id="scr"><div id="sc0"></div></div>
+
+<script src="game.js"></script>
+</body>
+</html>
